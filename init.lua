@@ -17,8 +17,27 @@ return {
     },
   },
 
-  -- Set colorscheme to use
-  colorscheme = "astrodark",
+
+  plugins = {
+    "AstroNvim/astrocommunity",
+    {
+      import = "astrocommunity.colorscheme.catppuccin",
+    }
+    -- ... import any community contributed plugins here
+  },
+
+  colorscheme = "astrodark", 
+
+  options = {
+    opt = {
+      colorcolumn = "80,100", 
+      numberwidth = 4,
+    },
+    g = {
+      autoformat_enabled = true;
+    },
+  },
+
 
   -- Diagnostics configuration (for vim.diagnostics.config({...})) when diagnostics are on
   diagnostics = {
@@ -36,7 +55,7 @@ return {
           -- "go",
         },
         ignore_filetypes = { -- disable format on save for specified filetypes
-          -- "python",
+          "python",
         },
       },
       disabled = { -- disable formatting capabilities for the listed language servers
@@ -51,6 +70,9 @@ return {
     -- enable servers that you already have installed without mason
     servers = {
       -- "pyright"
+    },
+    capabilities = {
+      offsetEncoding = {'utf-16'},
     },
   },
 
