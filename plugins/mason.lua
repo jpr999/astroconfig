@@ -10,7 +10,7 @@ return {
         "bashls",
         "clangd",
         "cmake",
-        "luals",
+        "lua_ls",
       })
     end,
   },
